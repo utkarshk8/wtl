@@ -1,11 +1,4 @@
-import {
-  Button,
-  createMuiTheme,
-  Tab,
-  Tabs,
-  TextField,
-  ThemeProvider,
-} from "@material-ui/core";
+import { Button, Tab, Tabs, TextField } from "@material-ui/core";
 import "./Search.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { useEffect, useState } from "react";
@@ -19,15 +12,6 @@ const Search = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
-
-  const darkTheme = createMuiTheme({
-    palette: {
-      type: "dark",
-      primary: {
-        main: "#fff",
-      },
-    },
-  });
 
   const fetchSearch = async () => {
     try {
