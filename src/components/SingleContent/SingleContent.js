@@ -17,11 +17,13 @@ const SingleContent = ({
         badgeContent={vote_average}
         color={vote_average > 6 ? "primary" : "secondary"}
       />
-      <img
-        className="poster"
-        src={poster ? `${img_300}${poster}` : unavailable}
-        alt={title}
-      />
+      <div className="main_div">
+        <img
+          className="poster"
+          src={poster ? `${img_300}${poster}` : unavailable}
+          alt={title}
+        />
+      </div>
       <b className="title">{title}</b>
       <span className="subTitle">
         {media_type === "tv" ? "TV Series" : "Movie"}

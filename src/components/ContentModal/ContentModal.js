@@ -93,7 +93,10 @@ export default function TransitionsModal({ children, media_type, id }) {
       >
         <Fade in={open}>
           {content && (
-            <div className={classes.paper}>
+            <div
+              className={classes.paper}
+              style={{ backgroundColor: "black", border: "none" }}
+            >
               <div className="ContentModal">
                 <img
                   src={

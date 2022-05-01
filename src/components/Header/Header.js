@@ -1,10 +1,12 @@
 import "./Header.css";
+import { VideoCameraIcon } from "@heroicons/react/solid";
 
 const Header = () => {
   return (
-    <span onClick={() => window.scroll(0, 0)} className="header">
-      🎬 Entertainment Hub 🎥
-    </span>
+    <div className="header">
+      <VideoCameraIcon width="32px" style={{ marginRight: "8px" }} />
+      <div>TV APP</div>
+    </div>
   );
 };
 

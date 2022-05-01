@@ -52,38 +52,43 @@ const Search = () => {
 
   return (
     <div>
-      <ThemeProvider theme={darkTheme}>
-        <div className="search">
-          <TextField
-            style={{ flex: 1 }}
-            className="searchBox"
-            label="Search"
-            variant="filled"
-            onChange={(e) => setSearchText(e.target.value)}
-          />
-          <Button
-            onClick={fetchSearch}
-            variant="contained"
-            style={{ marginLeft: 10 }}
-          >
-            <SearchIcon fontSize="large" />
-          </Button>
-        </div>
-        <Tabs
-          value={type}
-          indicatorColor="primary"
-          textColor="primary"
-          onChange={(event, newValue) => {
-            setType(newValue);
-            setPage(1);
-          }}
-          style={{ paddingBottom: 5 }}
-          aria-label="disabled tabs example"
+      <form
+        className="search"
+        onSubmit={(e) => {
+          e.preventDefault();
+          fetchSearch();
+        }}
+      >
+        <TextField
+          style={{ flex: 1 }}
+          className="searchBox"
+          label="Search"
+          variant="filled"
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+        <Button
+          variant="contained"
+          style={{ marginLeft: 10 }}
+          onClick={fetchSearch}
         >
-          <Tab style={{ width: "50%" }} label="Search Movies" />
-          <Tab style={{ width: "50%" }} label="Search TV Series" />
-        </Tabs>
-      </ThemeProvider>
+          <SearchIcon fontSize="large" />
+        </Button>
+      </form>
+      <Tabs
+        value={type}
+        indicatorColor="primary"
+        textColor="primary"
+        onChange={(event, newValue) => {
+          setType(newValue);
+          setPage(1);
+        }}
+        style={{ paddingBottom: 5 }}
+        aria-label="disabled tabs example"
+      >
+        <Tab style={{ width: "50%" }} label="Search Movies" />
+        <Tab style={{ width: "50%" }} label="Search TV Series" />
+      </Tabs>
+
       <div className="trending">
         {content &&
           content.map((c) => (

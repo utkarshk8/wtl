@@ -4,15 +4,15 @@
 
 .app {
   min-height: 100vh;
-  background-color: #39445a;
-  color: white;
-  padding-top: 130px;
-  padding-bottom: 70px;
+  background-color: #effffd;
+  color: black;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 700px) {
   .app {
-    padding-top: 70px;
+    padding-top: 100px;
   }
 }
 
@@ -20,15 +20,17 @@
   text-transform: uppercase;
   display: flex;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Space Mono", sans-serif;
   font-size: 2vw;
   padding: 4px;
   border-radius: 50px;
-  color: white;
+  color: black;
+  font-weight: 700;
 }
 
 @media (max-width: 1000px) {
   .pageTitle {
     font-size: 6.4vw;
+    color: black;
   }
 }
