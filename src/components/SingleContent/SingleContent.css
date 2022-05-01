@@ -6,7 +6,7 @@
   padding: 5px;
   margin: 5px 0;
   margin-bottom: 1rem;
-  background-color: #effffd;
+  background-color: #6696ab;
   color: black;
   font-weight: 700;
   border-radius: 10px;
@@ -35,12 +35,6 @@
   background-color: white;
   color: black;
   transform: scale(1.02);
-}
-
-@media (max-width: 550px) {
-  .media {
-    width: 46%;
-  }
 }
 
 .poster {
